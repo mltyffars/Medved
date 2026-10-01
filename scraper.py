@@ -3,6 +3,7 @@ import json
 import os
 import requests
 from bs4 import BeautifulSoup
+from main import process_with_ai
 
 PROCESSED_FILE = "processed_projects.json"
 
@@ -65,8 +66,8 @@ def run_poller():
             if project["id"] not in processed_ids:
                 print(f"New project detected: {project['title']}")
                 
-                # ------ AI Core Integration goes here ------
-                # process_with_ai(project)
+                # استدعاء دالة الذكاء الاصطناعي لمعالجة المشروع وتوليد العرض
+                process_with_ai(project)
                 
                 processed_ids.add(project["id"])
                 save_processed_ids(processed_ids)
