@@ -18,7 +18,7 @@ def save_processed_ids(processed_ids):
         json.dump(list(processed_ids), f)
 
 def fetch_mostaql_projects():
-    # رابط تصفح مشاريع البرمجة والتطوير في مستقل (كمثال أساسي)
+    # رابط تصفح مشاريع البرمجة والتطوير في مستقل
     url = "https://mostaql.com/projects?category=development"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -33,7 +33,7 @@ def fetch_mostaql_projects():
         soup = BeautifulSoup(response.text, "html.parser")
         projects = []
         
-        # استخراج عناصر المشاريع من الصفحة (يتم مطابقة الـ selectors حسب هيكل المنصة)
+        # استخراج عناصر المشاريع من الصفحة
         project_elements = soup.find_all("div", class_="project__row")
         
         for el in project_elements:
@@ -68,9 +68,9 @@ def run_poller():
         
         for project in projects:
             if project["id"] not in processed_ids:
-                print(تم اكتشاف مشروع جديد: {project['title']})
+                print(f"تم اكتشاف مشروع جديد: {project['title']}")
                 
-                # ------ هنا يتم استدعاء النواة الخاصة ببوت Medvedev لتحليل المشروع ------
+                # ------ هنا سيتم استدعاء النواة الخاصة ببوت Medvedev لاحقاً ------
                 # process_with_ai(project)
                 
                 processed_ids.add(project["id"])
