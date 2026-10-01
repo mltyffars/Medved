@@ -18,7 +18,7 @@ AI_PROVIDERS = [
     },
     {
         "name": "OpenAI",
-        "keys": ["sk-OPENAI_KEY_1", "sk-OPENAI_KEY_2"],
+        "keys": ["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", "sk-OPENAI_KEY_2"],
         "url": "https://api.openai.com/v1/chat/completions",
     },
     {
