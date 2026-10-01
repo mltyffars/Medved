@@ -13,7 +13,7 @@ import requests
 AI_PROVIDERS = [
     {
         "name": "Gemini",
-        "keys": ["AIzaSy_GEMINI_KEY_1", "AIzaSy_GEMINI_KEY_2"],
+        "keys": ["https://a77fe16144f57eff-136-119-150-58.serveousercontent.com", "AIzaSy_GEMINI_KEY_2"],
         "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
     },
     {
