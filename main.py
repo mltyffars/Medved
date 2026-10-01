@@ -1,3 +1,33 @@
+import os
+from scraper import run_poller
+# استيراد مكتبات الذكاء الاصطناعي الخاصة بك (مثل openai أو google.generativeai)
+# import google.generativeai as genai
+
+# إعداد مفاتيح API الخاصة بالنماذج
+# genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+def process_with_ai(project):
+    """
+    هذه الدالة تستقبل تفاصيل المشروع الجديد وتمررها للذكاء الاصطناعي
+    لتوليد تحليل أو عرض سعر تلقائي.
+    """
+    print(f"Analyzing project with AI: {project['title']}")
+    
+    # مثال على تمرير النص للذكاء الاصطناعي وتوليد الرد
+    prompt = f"قم بكتابة عرض احترافي ومقنع لهذا المشروع على منصة مستقل:\nالعنوان: {project['title']}\nالرابط: {project['link']}"
+    
+    # هنا يتم استدعاء نموذج الذكاء الاصطناعي الخاص بك (مثلاً Gemini)
+    # response = model.generate_content(prompt)
+    # print(response.text)
+    
+    # حالياً كاختبار مبدئي للـ MVP:
+    print("AI Proposal generated successfully (Placeholder).")
+
+if __name__ == "__main__":
+    print("Starting Medvedev Bot Master Process...")
+    # ربط دالة الفحص بمعالجة الذكاء الاصطناعي
+    # ملاحظة: يمكنك استدعاء run_poller وحقن دالة المعالجة فيها
+    run_poller()
 import html
 import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
