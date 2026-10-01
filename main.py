@@ -23,7 +23,7 @@ AI_PROVIDERS = [
     },
     {
         "name": "Claude",
-        "keys": ["sk-ant-CLAUDE_KEY_1", "sk-ant-CLAUDE_KEY_2"],
+        "keys": ["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", "sk-ant-CLAUDE_KEY_2"],
         "url": "https://api.anthropic.com/v1/messages",
     },
 ]
